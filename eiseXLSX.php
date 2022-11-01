@@ -1851,7 +1851,7 @@ protected function rmrf($dir){
  * @return string Workbook file name when $dest="F" or string with workbook content when $dest="S". When $dest="I" or "D" it quits PHP with die(). 
  */
 public function Output($fileName = "", $dest = "S") {
-
+    $remove = false;
     // if filename is set but destination is omitted, the conent will echoed with Content-disposition: attachment
     if($fileName && func_num_args()===1)
         $dest = 'D';
