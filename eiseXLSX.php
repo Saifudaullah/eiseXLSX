@@ -217,7 +217,7 @@ public function data($cellAddress, $data = null, $t = "s", $flags = null){
         } else { // if not or undefined
             $retVal = $this->formatDataRead($c["s"], (string)$o_v);
             if ($data!==null && $t=="s") {// if forthcoming type is string, we add shared string
-                $o_si = &$this->addSharedString($c);
+                $o_si = $this->addSharedString($c);
             }
         }
     } else {
